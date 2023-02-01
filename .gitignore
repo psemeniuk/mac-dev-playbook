@@ -3,4 +3,5 @@
 .ansible
 *.retry
 roles*
-config.yml
+.idea/
+overrides/
