@@ -1,0 +1,11 @@
+- name: Create ~/development Directory
+  file:
+    state: directory
+    path: "{{ ansible_env.HOME }}/{{ dev_directory_name | default('development') }}"
+
+- name: Pull Repositories
+  git:
+    repo: "{{ item }}"
+    dest: "{{ ansible_env.HOME }}/{{ dev_directory_name | default('development') }}/{{ (item | basename).split('.').0 }}"
+    update: no
+  loop: "{{ dev_repositories | default([]) }}"
