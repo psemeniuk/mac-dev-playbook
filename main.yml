@@ -67,30 +67,15 @@
             loop_var: outer_item
           with_fileglob: "{{ post_provision_tasks | default(omit) }}"
 
-#TODO displays orientation, placement, wide as main
-#TODO warp config
-#TODO remove % on the end of command output
-#TODO review https://github.com/pivovarit/mac-os-playbook/blob/c689e4cfe0ab67351592d845a1158c4b26aa9a68/roles/macos-config/tasks/main.yml
-#TODO review https://github.com/pivovarit/mac-os-playbook/blob/c689e4cfe0ab67351592d845a1158c4b26aa9a68/roles/macos-config/tasks/finder-config.yml
-#TODO review https://github.com/pivovarit/mac-os-playbook/blob/c689e4cfe0ab67351592d845a1158c4b26aa9a68/roles/macos-config/tasks/dock-config.yml
-#TODO customize macos shortcuts
-#TODO review https://github.com/pivovarit/mac-os-playbook/blob/c689e4cfe0ab67351592d845a1158c4b26aa9a68/group_vars/all
-#TODO review https://github.com/geerlingguy/dotfiles
-#TODO aliases for docker run & docker build, enter running container
-#TODO alias for replace in file
-#TODO aliases for kubectl common cases
-#TODO set git private mail for dotfiles & mac-dev-playbook
-#TODO some solution for deep work (exit from slack, mail and restore after x?)
-#TODO cli dictionary
-#TODO cli calculator
-#TODO httpie
-#TODO lower, other text manipulation commands command
-#TODO sleep on closing macbook
-#TODO window alignment
-#TODO separate windows of applications
-#TODO tray system monitor (cpu/mem/network usage)
-#TODO automate rustup-init -y cat .zshenv #. "$HOME/.cargo/env"
-#TODO karabiner dotfiles; karabiner autostart in tray; https://ke-complex-modifications.pqrs.org/#device-specific
-#TODO disable shortcuts
-#  https://apple.stackexchange.com/questions/422371/how-to-disable-cmdshifta-and-cmdshiftm-from-cli-in-macos / https://gist.github.com/rngtng/652031/fcc19fb55d1dec96acf3e4683091e57c676abc7f
-#  https://appsliced.co/ask/how-do-i-disable-the-emoji-keyboard-shortcut-on-my-mac√
+# Currently manual steps are:
+# installing brew
+# installing ansible
+# installing git
+# installing xcode
+# approving all kind of access for apps
+# disabling emoji and "open man page" shortcuts
+#   https://apple.stackexchange.com/questions/422371/how-to-disable-cmdshifta-and-cmdshiftm-from-cli-in-macos / https://gist.github.com/rngtng/652031/fcc19fb55d1dec96acf3e4683091e57c676abc7f
+#   https://appsliced.co/ask/how-do-i-disable-the-emoji-keyboard-shortcut-on-my-mac√
+# disabling notifications & sound in Mail app
+# change desktop background to black on all displays/desktops
+# install openlens extension https://github.com/alebcay/openlens-node-pod-menu

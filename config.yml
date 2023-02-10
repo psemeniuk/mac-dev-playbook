@@ -1,8 +1,10 @@
 ---
 
 configure_osx: true
+osx_script: "~/.osx"
 
 configure_dotfiles: true
+dotfiles_repo: https://github.com/psemeniuk/dotfiles.git
 dotfiles_repo_local_destination: ~/development/private/dotfiles
 dotfiles_files:
   - .gitconfig
@@ -10,6 +12,9 @@ dotfiles_files:
   - .osx
   - .zshrc
   - .bin/idea
+  - .config/karabiner/karabiner.json
+  - .yabairc
+  - .skhdrc
 dotfiles_gitconfig_email: patryk.semen@gmail.com
 
 
@@ -93,6 +98,12 @@ homebrew_installed_packages:
   - gh
   - rustup
   - stern
+  - calc
+  - bat
+  - gping
+  - koekeishiya/formulae/yabai #TODO service start; restart on changes in file; check if starts automatically
+  - koekeishiya/formulae/skhd #TODO service start; restart on changes in file; check if starts automatically
+  - act
 
 homebrew_cask_apps:
   - docker
@@ -100,8 +111,11 @@ homebrew_cask_apps:
   - intellij-idea
   - slack
   - spotify
-#  - openlens #FIXME currently doesn't work on 6.3.0 and there is no simple way to downgrade in homebrew
+  - openlens
   - temurin
   - karabiner-elements
+  - wireshark
+  - middleclick
+  - alt-tab
 
 configure_dev_env: true
