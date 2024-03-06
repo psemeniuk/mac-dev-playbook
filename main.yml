@@ -16,6 +16,10 @@
       file:
         state: directory
         path: "{{ ansible_env.HOME }}/.bin"
+    - name: Create ~/.config/karabiner Directory
+      file:
+        state: directory
+        path: "{{ ansible_env.HOME }}/.config/karabiner"
     - import_tasks: tasks/render-dotfiles.yml
       when: configure_dotfiles
       tags: ['dotfiles']
@@ -68,14 +72,15 @@
           with_fileglob: "{{ post_provision_tasks | default(omit) }}"
 
 # Currently manual steps are:
-# installing brew
-# installing ansible
-# installing git
 # installing xcode
+# installing ansible
 # approving all kind of access for apps
 # disabling emoji and "open man page" shortcuts
+# toggle function keys behind Fn
 #   https://apple.stackexchange.com/questions/422371/how-to-disable-cmdshifta-and-cmdshiftm-from-cli-in-macos / https://gist.github.com/rngtng/652031/fcc19fb55d1dec96acf3e4683091e57c676abc7f
 #   https://appsliced.co/ask/how-do-i-disable-the-emoji-keyboard-shortcut-on-my-mac√
 # disabling notifications & sound in Mail app
 # change desktop background to black on all displays/desktops
 # install openlens extension https://github.com/alebcay/openlens-node-pod-menu
+# idea configuration sync + plugins install
+# warp settings sync
