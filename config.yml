@@ -59,9 +59,6 @@ dockitems_persist:
  - name: "Slack"
    path: "/Applications/Slack.app/"
    pos: 3
- - name: "YouTube Music"
-   path: "/Applications/YouTube Music Desktop App.app/"
-   pos: 4
  - name: "OpenLens"
    path: "/Applications/OpenLens.app/"
    pos: 5
@@ -112,7 +109,6 @@ homebrew_cask_apps:
   - warp
   - intellij-idea
   - slack
-  - ytmdesktop-youtube-music
   - openlens
   - temurin
   - karabiner-elements
