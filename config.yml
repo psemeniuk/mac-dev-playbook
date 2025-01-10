@@ -103,11 +103,18 @@ homebrew_installed_packages:
   - koekeishiya/formulae/yabai #TODO service start; restart on changes in file; check if starts automatically
   - koekeishiya/formulae/skhd #TODO service start; restart on changes in file; check if starts automatically
   - act
+  - aider
+  - bettercap
+  - k6
+  - ollama
+  - ripgrep
+  - uv
 
 homebrew_cask_apps:
   - docker
   - warp
   - intellij-idea
+  - jetbrains-toolbox
   - slack
   - openlens
   - temurin
