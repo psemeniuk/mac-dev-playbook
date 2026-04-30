@@ -83,6 +83,10 @@ mas_password: ""
 
 osx_script: "~/.osx --no-restart"
 
+alt_tab_preferences:
+  updatePolicy: 0
+  holdShortcut: "⌘"
+
 # Install packages from other package managers.
 # Note: You are responsible for making sure the required package managers are
 # installed, eg. through homebrew.

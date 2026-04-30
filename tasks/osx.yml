@@ -3,3 +3,38 @@
 - name: Run .osx dotfiles.
   command: "{{ osx_script }}"
   changed_when: false
+
+- name: Read AltTab update policy preference.
+  command: >-
+    plutil -extract updatePolicy raw -o -
+    {{ ansible_env.HOME }}/Library/Preferences/com.lwouis.alt-tab-macos.plist
+  register: alt_tab_update_policy_current
+  changed_when: false
+  failed_when: false
+  when: "'alt-tab' in homebrew_cask_apps"
+
+- name: Read AltTab hold shortcut preference.
+  command: >-
+    plutil -extract holdShortcut raw -o -
+    {{ ansible_env.HOME }}/Library/Preferences/com.lwouis.alt-tab-macos.plist
+  register: alt_tab_hold_shortcut_current
+  changed_when: false
+  failed_when: false
+  when: "'alt-tab' in homebrew_cask_apps"
+
+- name: Set AltTab preferences.
+  command: >-
+    defaults write com.lwouis.alt-tab-macos {{ item.key }}
+    {{ item.type }} {{ item.value }}
+  loop:
+    - key: updatePolicy
+      type: -int
+      value: "{{ alt_tab_preferences.updatePolicy }}"
+      current: "{{ alt_tab_update_policy_current.stdout | default('') }}"
+    - key: holdShortcut
+      type: -string
+      value: "{{ alt_tab_preferences.holdShortcut | quote }}"
+      current: "{{ alt_tab_hold_shortcut_current.stdout | default('') }}"
+  when:
+    - "'alt-tab' in homebrew_cask_apps"
+    - item.current != (item.value | string)
