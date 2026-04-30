@@ -20,6 +20,10 @@
       file:
         state: directory
         path: "{{ ansible_env.HOME }}/.config/karabiner"
+    - name: Create ~/.config/opencode Directory
+      file:
+        state: directory
+        path: "{{ ansible_env.HOME }}/.config/opencode"
     - import_tasks: tasks/render-dotfiles.yml
       when: configure_dotfiles
       tags: ['dotfiles']
@@ -73,6 +77,7 @@
 
 # Currently manual steps are:
 # installing xcode
+# provision context7-api-key
 # installing ansible
 # approving all kind of access for apps
 # disabling emoji and "open man page" shortcuts
@@ -83,4 +88,3 @@
 # change desktop background to black on all displays/desktops
 # install openlens extension https://github.com/alebcay/openlens-node-pod-menu
 # idea configuration sync + plugins install
-# warp settings sync

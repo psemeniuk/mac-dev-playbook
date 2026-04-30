@@ -5,7 +5,7 @@
 - multi clipboard (+shared?) https://pasteapp.io/
 - hide dock in favor of shortcuts
 - sleep on closing macbook (https://github.com/ppkantorski/Airplane-Sleep + https://github.com/tyilo/Lid-sleep + disable usb; https://github.com/mvp/uhubctl)
-- dialog window with favourite shorcuts - NTH depending on focused application; eg. idea, slack, warp, chrome, OS, Lens
+- dialog window with favourite shorcuts - NTH depending on focused application; eg. idea, slack, chrome, OS, Lens
 - password manager
 - check connectivity instantly in status menu
 - docker daemon run at login
@@ -34,6 +34,13 @@
 - asking about TIL everyday dialog
 - deepl shortcut with dialog
 - OSS/local code assistant
+- update roles
+- lmstudio/omlx
+- opencode with company-specific overrides
+- chrome start with flags
+- ast-grep
+- macwhisper + parakeet v3
+
 
 NTHs:
 - evaluate docker desktop alternatives
@@ -41,10 +48,11 @@ NTHs:
 - automate rustup-init -y cat .zshenv #. "$HOME/.cargo/env"
 - review https://ke-complex-modifications.pqrs.org/#device-specific
 - remove % on the end of command output
-- warp config
 - review https://github.com/geerlingguy/dotfiles
 - cli dictionary
 - httpie
 - tray system monitor (cpu/mem/network usage)
 - displays orientation, placement, wide as main
 - some plugin for chrome to copy form values from another form
+- review https://github.com/harperreed/dotfiles/tree/master
+- https://synappser.github.io/apps/autofocus/

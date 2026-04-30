@@ -9,6 +9,7 @@ dotfiles_repo_local_destination: ~/development/private/dotfiles
 dotfiles_files:
   - .gitconfig
   - .gitignore_global
+  - .config/opencode/opencode.jsonc
   - .osx
   - .zshrc
   - .bin/idea
@@ -50,24 +51,21 @@ dockitems_remove:
   - Freeform
   - System Settings
 dockitems_persist:
- - name: "Google Chrome"
-   path: "/Applications/Google Chrome.app/"
-   pos: 1
- - name: "IntelliJ IDEA"
-   path: "/Applications/IntelliJ IDEA.app/"
-   pos: 2
- - name: "Slack"
-   path: "/Applications/Slack.app/"
-   pos: 3
- - name: "OpenLens"
-   path: "/Applications/OpenLens.app/"
-   pos: 5
- - name: "Mail"
-   path: "/Applications/Mail.app/"
-   pos: 6
- - name: "Warp"
-   path: "/Applications/Warp.app/"
-   pos: 7
+  - name: "Google Chrome"
+    path: "/Applications/Google Chrome.app/"
+    pos: 2
+  - name: "IntelliJ IDEA"
+    path: "/Applications/IntelliJ IDEA.app/"
+    pos: 3
+  - name: "Slack"
+    path: "/Applications/Slack.app/"
+    pos: 4
+  - name: "Mail"
+    path: "/Applications/Mail.app/"
+    pos: 5
+  - name: "Ghostty"
+    path: "/Applications/Ghostty.app/"
+    pos: 6
 
 homebrew_installed_packages:
   - awscli
@@ -76,24 +74,32 @@ homebrew_installed_packages:
   - nmap
   - docker
   - docker-compose
+  - go
   - helm
+  - hyperfine
   - kubernetes-cli
+  - opencode
+  - pandoc
+  - pre-commit
+  - protobuf
+  - rust
+  - socat
   - steampipe
-  - datawire/blackbird/telepresence-arm64
   - telnet
   - terraform
+  - terraform-docs
   - terragrunt
+  - tflint
   - git
   - htop
   - jq
   - maven
   - node
-  - python
   - tree
   - wget
   - watch
+  - wrk
   - zsh
-  - k9s
   - gh
   - rustup
   - stern
@@ -103,23 +109,24 @@ homebrew_installed_packages:
   - koekeishiya/formulae/yabai #TODO service start; restart on changes in file; check if starts automatically
   - koekeishiya/formulae/skhd #TODO service start; restart on changes in file; check if starts automatically
   - act
-  - aider
   - bettercap
   - k6
-  - ollama
   - ripgrep
   - uv
 
 homebrew_cask_apps:
   - docker
-  - warp
+  - docker-desktop
+  - ghostty
   - intellij-idea
   - jetbrains-toolbox
   - slack
   - openlens
-  - temurin
+  - temurin@25
   - karabiner-elements
+  - lm-studio
   - wireshark
+  - wireshark-app
   - middleclick
   - alt-tab
 

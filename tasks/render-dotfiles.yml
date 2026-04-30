@@ -8,6 +8,22 @@
     accept_hostkey: "{{ dotfiles_repo_accept_hostkey }}"
   become: false
 
+- name: Check dotfiles repo credential username.
+  command: git config --local --get credential.username
+  args:
+    chdir: "{{ dotfiles_repo_local_destination }}"
+  register: dotfiles_repo_credential_username
+  changed_when: false
+  failed_when: false
+  become: false
+
+- name: Set dotfiles repo credential username.
+  command: git config --local credential.username psemeniuk
+  args:
+    chdir: "{{ dotfiles_repo_local_destination }}"
+  when: dotfiles_repo_credential_username.stdout != 'psemeniuk'
+  become: false
+
 - name: Render all templates
   template:
     src: '{{ item.src }}'
