@@ -32,13 +32,15 @@
 - https://espanso.org/
 - asking about TIL everyday dialog
 - deepl shortcut with dialog
-- OSS/local code assistant
 - lmstudio/omlx
 - opencode with company-specific overrides
 - chrome start with flags
 - ast-grep
 - macwhisper + parakeet v3
 - CLI AI autocomplete
+- opencode sandbox
+- prompt to terminal command under `??` alias - based on opencode
+- diff in terminal - https://github.com/modem-dev/hunk
 
 NTHs:
 - evaluate docker desktop alternatives

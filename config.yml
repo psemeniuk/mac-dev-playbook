@@ -72,10 +72,14 @@ dockitems_persist:
   - name: "Ghostty"
     path: "/Applications/Ghostty.app/"
     pos: 6
+  - name: "Gemini"
+    path: "/Applications/Gemini.app/"
+    pos: 7
 
 homebrew_taps:
   - asmvik/formulae
   - hashicorp/tap
+  - anomalyco/tap
 
 homebrew_installed_packages:
   - awscli
@@ -88,7 +92,7 @@ homebrew_installed_packages:
   - helm
   - hyperfine
   - kubernetes-cli
-  - opencode
+  - anomalyco/tap/opencode
   - pandoc
   - pre-commit
   - protobuf
@@ -139,5 +143,7 @@ homebrew_cask_apps:
   - wireshark-app
   - middleclick
   - alt-tab
+  - opencode-desktop
+  - google-gemini
 
 configure_dev_env: true
